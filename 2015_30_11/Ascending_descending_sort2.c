@@ -18,7 +18,7 @@ void ascend_desc_sort(struct node *head)
     if(current->next == NULL) //List is already sorted
         return;
     temp = current;
-    while(temp->next != NULL && temp->data > temp->next->data) // Find the element after descending part. Example for 10->20->40->30->50 , 50 is in temp->next
+    while(temp->next != NULL && temp->data > temp->next->data) // Find the last element of descending part. Example for 10->20->40->30->50 ,30 is temp
         temp = temp->next;
     current = reverse(current,temp->next);  //reverse the descending part and store its head in current
    p->next = current; //append the reverse descending part head to last element of ascending part
